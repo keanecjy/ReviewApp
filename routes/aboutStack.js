@@ -1,14 +1,13 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import Home from "../screens/home";
-import ReviewDetails from "../screens/reviewDetails";
+import About from "../screens/about";
 
 const Stack = createStackNavigator();
 
-export default function homeNavigator() {
+export default function aboutNavigator() {
   return (
     <Stack.Navigator
-      initialRouteName="Home"
+      initialRouteName="About"
       screenOptions={{
         headerStyle: {
           backgroundColor: "#999",
@@ -20,17 +19,10 @@ export default function homeNavigator() {
       }}
     >
       <Stack.Screen
-        name="Home"
-        component={Home}
+        name="About"
+        component={About}
         options={{
-          title: "GameZone",
-        }}
-      />
-      <Stack.Screen
-        name="ReviewDetails"
-        component={ReviewDetails}
-        options={{
-          title: "Review Details",
+          title: "About",
         }}
       />
     </Stack.Navigator>
