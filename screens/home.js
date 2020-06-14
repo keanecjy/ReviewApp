@@ -14,6 +14,8 @@ import Card from "../shared/card";
 import { MaterialIcons } from "@expo/vector-icons";
 import ReviewForm from "./reviewForm";
 
+let i = 4;
+
 export default function Home({ navigation }) {
   const [modalOpen, setModalOpen] = useState(false);
   const [reviews, setReviews] = useState([
@@ -23,7 +25,8 @@ export default function Home({ navigation }) {
   ]);
 
   const addReview = (review) => {
-    review.key = Math.random().toString;
+    i++;
+    review.key = i.toString();
     setReviews((currentReviews) => {
       return [review, ...currentReviews];
     });
@@ -42,7 +45,6 @@ export default function Home({ navigation }) {
               onPress={() => setModalOpen(false)}
             />
             <ReviewForm addReview={addReview} />
-            <Text>Hello from the modal!</Text>
           </View>
         </TouchableWithoutFeedback>
       </Modal>
