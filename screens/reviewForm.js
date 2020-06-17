@@ -17,7 +17,6 @@ const reviewSchema = yup.object({
     }),
 });
 
-// TODO: What is restructuring in React?
 export default function ReviewForm({ addReview }) {
   return (
     <View style={globalStyles.container}>

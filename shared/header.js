@@ -8,7 +8,6 @@ import {
   Dimensions,
 } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
-import drawerNavigator from "../routes/drawer";
 
 export default function Header({ navigation, title }) {
   const openMenu = () => {
